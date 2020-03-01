@@ -35,7 +35,7 @@ class Song
   end
   
   def Song.find_or_create_by_name(song_name)
-    song.find_by_name || song.create_by_name
+    self.find_by_name || self.create_by_name
   end
   
   def Song.alphabetical
