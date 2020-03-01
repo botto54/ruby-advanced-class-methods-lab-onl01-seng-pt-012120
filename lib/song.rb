@@ -29,7 +29,9 @@ class Song
   end
   
   def Song.find_by_name
-    self.all.detect
+    self.all.detect { |song|
+    song.name
+    }
   end
   
   def Song.find_or_create_by_name
