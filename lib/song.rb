@@ -44,7 +44,7 @@ class Song
     }
   end
   
-  def Song.new_from_filename
+  def Song.new_from_filename(filename)
     new_file = filename.split(" - ")
     artist_name = new_file[0]
     song_name = new_file[1].gsub(".mp3", "")
