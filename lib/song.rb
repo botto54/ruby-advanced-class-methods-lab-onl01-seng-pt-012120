@@ -30,12 +30,12 @@ class Song
   
   def Song.find_by_name
     self.all.detect { |song|
-    song.name
+    song.name == song_name
     }
   end
   
   def Song.find_or_create_by_name
-    
+    song.find_by_name || song.create_by_name
   end
   
   def Song.alphabetical
